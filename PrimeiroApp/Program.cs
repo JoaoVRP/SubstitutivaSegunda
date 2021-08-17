@@ -6,6 +6,8 @@ namespace PrimeiroApp
     {
         static void Main(string[] args)
         {
+            string texto = " Uma  história   feliz ";
+            Con
             Console.WriteLine("Nosso primeiro App em C#!");
             Console.WriteLine("Digite o seu nome: ");
             string name = Console.ReadLine();
