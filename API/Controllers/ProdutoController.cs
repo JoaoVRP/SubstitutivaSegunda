@@ -62,8 +62,6 @@ namespace API.Controllers
             return Ok();
         }
 
-
-
         // PUT: api/produto/delete/bolacha
         [HttpPut]
         [Route("update")]
@@ -71,7 +69,7 @@ namespace API.Controllers
         {
             _context.Produtos.Update(produto);
             await _context.SaveChangesAsync();
-            return Ok();
+            return Ok(produto);
         }
     }
 }
