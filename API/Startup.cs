@@ -31,11 +31,13 @@ namespace API
             //Configuração para habilitar as requisições de outras origens - CORS
             services.AddCors(
                 options =>
-                {
+
                     options.AddPolicy("CorsPolicy", builder => builder
                         .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
                     );
-                }
+
             );
 
             //Configuração do serviço de banco de dados
