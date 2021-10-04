@@ -36,8 +36,7 @@ namespace API
                         .AllowAnyOrigin()
                         .AllowAnyMethod()
                         .AllowAnyHeader()
-                    );
-
+                    )
             );
 
             //Configuração do serviço de banco de dados
