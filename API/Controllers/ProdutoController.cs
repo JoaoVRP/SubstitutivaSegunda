@@ -23,6 +23,7 @@ namespace API.Controllers
         [Route("create")]
         public async Task<IActionResult> CreateAsync([FromBody] Produto produto)
         {
+            produto.Categoria = _context.Categorias.Find(produto.CategoriaId);
             _context.Produtos.Add(produto);
             await _context.SaveChangesAsync();
             return Created("", produto);
@@ -31,7 +32,9 @@ namespace API.Controllers
         // GET: api/produto/list
         [HttpGet]
         [Route("list")]
-        public async Task<IActionResult> ListAsync() => Ok(await _context.Produtos.ToListAsync());
+        public async Task<IActionResult> ListAsync() =>
+            Ok(await _context.Produtos.Include(p => p.Categoria).ToListAsync());
+        // Ok(await _context.Produtos.Where(p => p.CategoriaId == 1).ToListAsync());
 
         // GET: api/produto/getbyid/5
         [HttpGet]
