@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
+import { MatGridListModule } from "@angular/material/grid-list";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
@@ -16,8 +17,10 @@ import { AppRoutingModule } from "./app-routing.module";
 // Imports dos componentes internos
 import { AppComponent } from "./app.component";
 import { TemplateComponent } from "./components/template/template.component";
+import { IndexComponent } from "./components/views/home/index/index.component";
 import { CadastrarProdutoComponent } from "./components/views/produto/cadastrar-produto/cadastrar-produto.component";
 import { ListarProdutoComponent } from "./components/views/produto/listar-produto/listar-produto.component";
+import { CarrinhoComponent } from './components/views/home/carrinho/carrinho.component';
 
 @NgModule({
     declarations: [
@@ -25,6 +28,8 @@ import { ListarProdutoComponent } from "./components/views/produto/listar-produt
         ListarProdutoComponent,
         CadastrarProdutoComponent,
         TemplateComponent,
+        IndexComponent,
+        CarrinhoComponent,
     ],
     imports: [
         BrowserModule,
@@ -41,6 +46,7 @@ import { ListarProdutoComponent } from "./components/views/produto/listar-produt
         MatCardModule,
         MatSelectModule,
         MatInputModule,
+        MatGridListModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
