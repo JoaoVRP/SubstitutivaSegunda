@@ -14,13 +14,14 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
+import { MatBadgeModule } from "@angular/material/badge";
 // Imports dos componentes internos
 import { AppComponent } from "./app.component";
 import { TemplateComponent } from "./components/template/template.component";
 import { IndexComponent } from "./components/views/home/index/index.component";
 import { CadastrarProdutoComponent } from "./components/views/produto/cadastrar-produto/cadastrar-produto.component";
 import { ListarProdutoComponent } from "./components/views/produto/listar-produto/listar-produto.component";
-import { CarrinhoComponent } from './components/views/home/carrinho/carrinho.component';
+import { CarrinhoComponent } from "./components/views/home/carrinho/carrinho.component";
 
 @NgModule({
     declarations: [
@@ -47,6 +48,7 @@ import { CarrinhoComponent } from './components/views/home/carrinho/carrinho.com
         MatSelectModule,
         MatInputModule,
         MatGridListModule,
+        MatBadgeModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

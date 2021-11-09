@@ -10,3 +10,6 @@
 .title {
     font-size: 1.1em;
 }
+.spacer {
+    flex: 1 1 auto;
+}
