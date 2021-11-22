@@ -41,7 +41,7 @@ namespace API
 
             //Configuração do serviço de banco de dados
             services.AddDbContext<DataContext>(
-                options => options.UseSqlServer(Configuration.GetConnectionString("Azure"))
+                options => options.UseInMemoryDatabase(Configuration.GetConnectionString("Azure"))
             );
             services.AddControllers();
             services.AddSwaggerGen(c =>
