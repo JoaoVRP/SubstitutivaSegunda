@@ -1,0 +1,29 @@
+### Cadastrar um usuário
+POST https://localhost:5001/api/usuario/create
+Content-Type: application/json
+
+{
+    "Email" : "diogo@diogo.com",
+    "Senha" : "123",
+    "Permissao" : "user"
+}
+
+### Realizar o login
+GET https://localhost:5001/api/usuario/login
+Content-Type: application/json
+
+{
+    "Email" : "diogo@diogo.com",
+    "Senha" : "123"
+}
+
+### Acesso sem autenticação
+GET https://localhost:5001/api/usuario/sem
+
+### Acesso com autenticação
+GET https://localhost:5001/api/usuario/com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRpb2dvMUBkaW9nbzEuY29tIiwicm9sZSI6ImFkbSIsIm5iZiI6MTYzNzYyODE3NSwiZXhwIjoxNjM3NjM1Mzc1LCJpYXQiOjE2Mzc2MjgxNzV9.Dm78zCTuEFvyT-YBPeJpTK5NIo6XavWpGV_nLSlEGHg
+
+### Acesso com permissão
+GET https://localhost:5001/api/usuario/permissao
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRpb2dvQGRpb2dvLmNvbSIsInJvbGUiOiJ1c2VyIiwibmJmIjoxNjM3NjI5NTM1LCJleHAiOjE2Mzc2MzY3MzUsImlhdCI6MTYzNzYyOTUzNX0.txWa7KuQBge4s2klKK9D6u78HZv1lImbTPEgD_lYMbw
