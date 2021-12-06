@@ -20,13 +20,13 @@ import { AppComponent } from "./app.component";
 import { TemplateComponent } from "./components/template/template.component";
 import { IndexComponent } from "./components/views/home/index/index.component";
 import { CadastrarFuncionarioComponent } from "./components/views/funcionario/cadastrar-funcionario/cadastrar-funcionario.component";
-import { ListarProdutoComponent } from "./components/views/produto/listar-produto/listar-produto.component";
+import { ListarFuncionarioComponent } from "./components/views/funcionario/listar-funcionario/listar-funcionario.component";
 import { CarrinhoComponent } from "./components/views/home/carrinho/carrinho.component";
 
 @NgModule({
     declarations: [
         AppComponent,
-        ListarProdutoComponent,
+        ListarFuncionarioComponent,
         CadastrarFuncionarioComponent,
         TemplateComponent,
         IndexComponent,

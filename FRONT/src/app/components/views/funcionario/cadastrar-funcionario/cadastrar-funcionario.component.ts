@@ -30,7 +30,7 @@ export class CadastrarFuncionarioComponent implements OnInit {
             cargo: this.cargo
         };
         this.funcionarioService.create(funcionario).subscribe((funcionario) => {
-            this.router.navigate(["produto/listar"]);
+            this.router.navigate(["funcionario/listar"]);
         });
     }
 }

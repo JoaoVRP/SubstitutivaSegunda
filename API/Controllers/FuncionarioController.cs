@@ -32,7 +32,7 @@ namespace API.Controllers
         [HttpGet]
         [Route("list")]
         public async Task<IActionResult> ListAsync() =>
-            Ok(await _context.Produtos.Include(p => p.Categoria).ToListAsync());
+            Ok(await _context.Funcionarios.ToListAsync());
         // Ok(await _context.Produtos.Where(p => p.CategoriaId == 1).ToListAsync());
 
         // GET: api/produto/getbyid/5
