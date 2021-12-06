@@ -19,7 +19,7 @@ import { MatBadgeModule } from "@angular/material/badge";
 import { AppComponent } from "./app.component";
 import { TemplateComponent } from "./components/template/template.component";
 import { IndexComponent } from "./components/views/home/index/index.component";
-import { CadastrarProdutoComponent } from "./components/views/produto/cadastrar-produto/cadastrar-produto.component";
+import { CadastrarFuncionarioComponent } from "./components/views/funcionario/cadastrar-funcionario/cadastrar-funcionario.component";
 import { ListarProdutoComponent } from "./components/views/produto/listar-produto/listar-produto.component";
 import { CarrinhoComponent } from "./components/views/home/carrinho/carrinho.component";
 
@@ -27,7 +27,7 @@ import { CarrinhoComponent } from "./components/views/home/carrinho/carrinho.com
     declarations: [
         AppComponent,
         ListarProdutoComponent,
-        CadastrarProdutoComponent,
+        CadastrarFuncionarioComponent,
         TemplateComponent,
         IndexComponent,
         CarrinhoComponent,
