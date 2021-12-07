@@ -22,4 +22,8 @@ export class FolhaService {
     create(folha: Folha): Observable<Folha> {
         return this.http.post<any>(`${this.baseURL}/create`, folha);
     }
+
+    delete(id : number): Observable<Folha> {
+        return this.http.delete<any>(`${this.baseURL}/delete/${id}`);
+    }
 }

@@ -59,15 +59,15 @@ namespace API.Controllers
 
         // DELETE: api/produto/delete/bolacha
         [HttpDelete]
-        [Route("delete/{name}")]
-        public async Task<IActionResult> DeleteAsync([FromRoute] string name)
+        [Route("delete/{id}")]
+        public async Task<IActionResult> DeleteAsync([FromRoute] int id)
         {
             //Retorna o primeiro elemento com base na expressão lambda
-            Produto produto = _context.Produtos.FirstOrDefault
+            Folha folha = _context.Folhas.FirstOrDefault
             (
-                produto => produto.Nome == name
+                folha => folha.Id == id
             );
-            _context.Produtos.Remove(produto);
+            _context.Folhas.Remove(folha);
             await _context.SaveChangesAsync();
             return Ok();
         }

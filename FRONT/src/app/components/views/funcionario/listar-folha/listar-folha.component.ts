@@ -20,7 +20,8 @@ export class ListarFolhaComponent implements OnInit {
         "imposto",
         "inss",
         "fgts",
-        "salarioliquido"
+        "salarioliquido",
+        "acoes"
     ];
 
     constructor(private service: FolhaService) {}
@@ -31,4 +32,31 @@ export class ListarFolhaComponent implements OnInit {
             console.log(folhas);
         });
     }
+    delete(id:number): void {
+        var resposta = window.confirm("Deseja deletar essa folha?");
+        if (resposta == true){
+            this.service.delete(id).subscribe((res) =>{
+                this.service.list().subscribe((folhas) => {
+                    this.folhas = folhas;
+                    console.log(folhas);
+                });
+            },(error)=>{
+                window.alert("Esse cadastro já existe!")
+            });
+        }
+
+        /*let folha: Folha = {
+            ano: this.ano,
+            mes: this.mes,
+            horas: this.horas,
+            valor: this.valor,
+            funcionarioid: this.funcionarioid
+        };
+        this.folhaService.create(folha).subscribe((res) =>{
+            console.log(folha)
+            //this.router.navigate(["folha/listar"]);
+        },(error)=>{
+            window.alert("Esse cadastro já existe!")
+        });
+    */}
 }
