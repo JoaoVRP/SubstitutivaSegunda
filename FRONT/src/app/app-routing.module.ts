@@ -5,6 +5,7 @@ import { IndexComponent } from "./components/views/home/index/index.component";
 import { CadastrarFuncionarioComponent } from "./components/views/funcionario/cadastrar-funcionario/cadastrar-funcionario.component";
 import { ListarFuncionarioComponent } from "./components/views/funcionario/listar-funcionario/listar-funcionario.component";
 import { CadastrarFolhaComponent } from "./components/views/funcionario/cadastrar-folha/cadastrar-folha.component";
+import { ListarFolhaComponent } from "./components/views/funcionario/listar-folha/listar-folha.component";
 
 const routes: Routes = [
     {
@@ -27,6 +28,10 @@ const routes: Routes = [
         path: "folha/cadastrar",
         component: CadastrarFolhaComponent,
     },
+    {
+        path: "folha/listar",
+        component: ListarFolhaComponent,
+    }
 ];
 
 @NgModule({

@@ -34,8 +34,14 @@ namespace API.Controllers
         // GET: api/produto/list
         [HttpGet]
         [Route("list")]
-        public async Task<IActionResult> ListAsync() =>
-            Ok(await _context.Folhas.ToListAsync());
+        public async Task<IActionResult> Array()
+        {
+            Folha[] folhas = _context.Folhas.ToArray();
+            foreach(Folha folha in folhas){
+                folha.Funcionario = _context.Funcionarios.Find(folha.FuncionarioId);
+            }
+            return Ok(folhas);
+        }
         // Ok(await _context.Produtos.Where(p => p.CategoriaId == 1).ToListAsync());
 
         // GET: api/produto/getbyid/5

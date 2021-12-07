@@ -1,0 +1,53 @@
+<a mat-raised-button color="primary" routerLink="/folha/cadastrar">
+    <mat-icon> add </mat-icon>
+    Nova Folha
+</a>
+<table mat-table [dataSource]="folhas" class="table mat-elevation-z8">
+    <!-- Coluna do Ano -->
+    <ng-container matColumnDef="ano">
+        <th class="header" mat-header-cell *matHeaderCellDef>Ano</th>
+        <td mat-cell *matCellDef="let folha">{{ folha.ano }}</td>
+    </ng-container>
+    <!-- Coluna do Nome -->
+    <ng-container matColumnDef="mes">
+        <th class="header" mat-header-cell *matHeaderCellDef>Mês</th>
+        <td mat-cell *matCellDef="let folha">{{ folha.mes }}</td>
+    </ng-container>
+    <!-- Coluna do Cargo -->
+    <ng-container matColumnDef="valor">
+        <th class="header" mat-header-cell *matHeaderCellDef>Valor da Hora Trabalhada</th>
+        <td mat-cell *matCellDef="let folha">{{ folha.valor }}</td>
+    </ng-container>
+    <!-- Coluna do Criado Em -->
+    <ng-container matColumnDef="horas">
+        <th class="header" mat-header-cell *matHeaderCellDef>Horas trabalhadas</th>
+        <td mat-cell *matCellDef="let folha">{{ folha.horas }}</td>
+    </ng-container>
+    <ng-container matColumnDef="nome">
+        <th class="header" mat-header-cell *matHeaderCellDef>Nome</th>
+        <td mat-cell *matCellDef="let folha">{{ folha.funcionario ? folha.funcionario.nome : "Sem nome" }}</td>
+    </ng-container>
+        <ng-container matColumnDef="cargo">
+            <th class="header" mat-header-cell *matHeaderCellDef>Cargo</th>
+            <td mat-cell *matCellDef="let folha">{{ folha.funcionario ? folha.funcionario.cargo : "Sem cargo" }}</td>
+        </ng-container>
+        <ng-container matColumnDef="salariobruto">
+            <th class="header" mat-header-cell *matHeaderCellDef>Salário Bruto</th>
+            <td mat-cell *matCellDef="let folha">{{ folha.salarioBruto }}</td>
+        </ng-container><ng-container matColumnDef="imposto">
+            <th class="header" mat-header-cell *matHeaderCellDef>Imposto de Renda</th>
+            <td mat-cell *matCellDef="let folha">{{ folha.imposto }}</td>
+        </ng-container><ng-container matColumnDef="inss">
+            <th class="header" mat-header-cell *matHeaderCellDef>INSS</th>
+            <td mat-cell *matCellDef="let folha">{{ folha.inss }}</td>
+        </ng-container><ng-container matColumnDef="fgts">
+        <th class="header" mat-header-cell *matHeaderCellDef>FGTS </th>
+        <td mat-cell *matCellDef="let folha">{{ folha.fgts }}</td>
+    </ng-container>
+    <ng-container matColumnDef="salarioliquido">
+        <th class="header" mat-header-cell *matHeaderCellDef>Salário Líquido</th>
+        <td mat-cell *matCellDef="let folha">{{ folha.salarioLiquido }}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="colunasExibidas"></tr>
+    <tr mat-row *matRowDef="let row; columns: colunasExibidas"></tr>
+</table>

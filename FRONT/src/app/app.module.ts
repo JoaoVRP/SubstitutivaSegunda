@@ -22,6 +22,7 @@ import { IndexComponent } from "./components/views/home/index/index.component";
 import { CadastrarFuncionarioComponent } from "./components/views/funcionario/cadastrar-funcionario/cadastrar-funcionario.component";
 import { ListarFuncionarioComponent } from "./components/views/funcionario/listar-funcionario/listar-funcionario.component";
 import { CadastrarFolhaComponent } from "./components/views/funcionario/cadastrar-folha/cadastrar-folha.component";
+import { ListarFolhaComponent } from "./components/views/funcionario/listar-folha/listar-folha.component";
 import { CarrinhoComponent } from "./components/views/home/carrinho/carrinho.component";
 
 @NgModule({
@@ -30,6 +31,7 @@ import { CarrinhoComponent } from "./components/views/home/carrinho/carrinho.com
         ListarFuncionarioComponent,
         CadastrarFuncionarioComponent,
         CadastrarFolhaComponent,
+        ListarFolhaComponent,
         TemplateComponent,
         IndexComponent,
         CarrinhoComponent,
